@@ -43,7 +43,6 @@ public class BoardTest {
         .extract()
                 .response()
                 .as(Board.class);
-        System.out.println(board);
     }
 
     @Test(priority = 1)
