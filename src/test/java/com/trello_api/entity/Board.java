@@ -16,7 +16,8 @@ public class Board {
     private LabelNames labelNames;
     private Limits limits;
 
-    public Board() {}
+    public Board() {
+    }
 
     public String getId() {
         return id;
@@ -114,11 +115,11 @@ public class Board {
         this.labelNames = labelNames;
     }
 
-    public Limits getLimits(){
+    public Limits getLimits() {
         return limits;
     }
 
-    public void setLimits(Limits limits){
+    public void setLimits(Limits limits) {
         this.limits = limits;
     }
 

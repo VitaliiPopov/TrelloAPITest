@@ -11,37 +11,37 @@ import static org.hamcrest.Matchers.equalTo;
 public class BoardTest extends Runner {
 
     @Test(priority = 1)
-    public void createBoard(){
+    public void createBoard() {
         board = given()
                 .spec(requestSpecification)
                 .queryParam("name", "test")
-                .when()
+        .when()
                 .post()
-                .then()
+        .then()
                 .statusCode(200)
-                .extract()
+        .extract()
                 .response()
                 .as(Board.class);
     }
 
     @Test(priority = 2, dependsOnMethods = "createBoard")
-    public void verifyBoardCreate(){
+    public void verifyBoardCreate() {
         given()
                 .spec(requestSpecification)
-                .when()
+        .when()
                 .get(board.getId())
-                .then()
+        .then()
                 .statusCode(200)
                 .body("name", containsString("test"));
     }
 
     @Test(priority = 3, dependsOnMethods = "createBoard")
-    public void deleteBoard(){
+    public void deleteBoard() {
         given()
                 .spec(requestSpecification)
-                .when()
+       .when()
                 .delete(board.getId())
-                .then()
+       .then()
                 .statusCode(200)
                 .body("_value", equalTo(null));
     }

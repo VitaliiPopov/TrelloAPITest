@@ -13,7 +13,8 @@ public class LabelNames {
     private String pink;
     private String black;
 
-    public LabelNames() {}
+    public LabelNames() {
+    }
 
     public String getGreen() {
         return green;

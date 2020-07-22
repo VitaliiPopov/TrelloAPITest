@@ -2,7 +2,8 @@ package com.trello_api.entity;
 
 public class Limits {
 
-    public Limits() {}
+    public Limits() {
+    }
 
     @Override
     public String toString() {

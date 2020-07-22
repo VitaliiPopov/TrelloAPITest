@@ -26,7 +26,8 @@ public class Prefs {
     private Boolean canBePrivate;
     private Boolean canInvite;
 
-    public Prefs() {}
+    public Prefs() {
+    }
 
     public String getPermissionLevel() {
         return permissionLevel;

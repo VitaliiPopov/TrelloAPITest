@@ -17,7 +17,7 @@ public class Runner {
 
     @BeforeClass
     @Parameters({"url", "path"})
-    public void setRequestSpecification(String url, String path){
+    public void setRequestSpecification(String url, String path) {
         requestSpecification = new RequestSpecBuilder()
                 .setBaseUri(url)
                 .setBasePath(path)
