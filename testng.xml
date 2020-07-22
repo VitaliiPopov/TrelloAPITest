@@ -2,13 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="API">
+    <parameter name="url" value="https://api.trello.com"/>
+    <parameter name="path" value="/1/boards/"/>
     <test name = "BoardTest">
         <classes>
             <class name="com.trello_api.test.BoardTest">
                 <methods>
-                    <include name="createBoard"></include>
-                    <include name="verifyBoardCreate"></include>
-                    <include name="deleteBoard"></include>
+                    <include name="createBoard"/>
+                    <include name="verifyBoardCreate"/>
+                    <include name="deleteBoard"/>
                 </methods>
             </class>
         </classes>
